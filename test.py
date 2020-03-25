@@ -11,8 +11,8 @@ def signal_handler(signal, frame): # ctrl + c -> exit program
 signal.signal(signal.SIGINT, signal_handler)
 
 gpio.setmode(gpio.BCM)
-trig = [23,27] # 7th
-echo = [24,22] # 6th
+trig = [19,6,27] # 7th
+echo = [26,13,22] # 6th
 
 for i in range(2):
 	gpio.setup(trig[i], gpio.OUT)
